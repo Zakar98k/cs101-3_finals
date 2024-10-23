@@ -30,10 +30,10 @@ p {
 }
 
 /* dark mode user-agent-styles */
-/* html {
+html {
   hanging-punctuation: first last;
   color-scheme: dark light;
-} */
+}
 
 /* min body height */
 body {
