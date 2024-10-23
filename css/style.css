@@ -104,10 +104,10 @@ ul, ol {
     width: 100%;
 }
 
-p, a {
+p, a, ul, ol {
     color: var(--text);
     font-size: var(--font-size-3);
-    line-height: var(--font-lineheight-2);
+    line-height: var(--font-lineheight-3);
     font-weight: normal;
 }
 
@@ -146,9 +146,11 @@ p {
         flex: 0;
     }
 
-    p, li > a {
+    p, ul a {
         font-size: var(--font-size-1);
-        line-height: var(--font-lineheight-2);
         font-weight: normal;
+    }
+    p:not(ul a) {
+        line-height: var(--font-lineheight-2);
     }
 }
