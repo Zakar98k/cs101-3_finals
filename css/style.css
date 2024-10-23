@@ -37,8 +37,8 @@
     background-color: var(--accent);
     color: var(--text);
 }
-b, i {
-    color: var(--secondary);
+i {
+    font-style: italic;
 }
 
 body {
@@ -54,8 +54,8 @@ main {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: var(--size-fluid-2);
-    padding: var(--size-fluid-2);
+    gap: var(--size-fluid-3);
+    padding: var(--size-fluid-3);
     width: 70%;
     min-width: fit-content;
     height: fit-content
@@ -78,7 +78,7 @@ main > * {
     flex: 2 0 2;
     flex-direction: column;
     min-width: fit-content;
-    padding: var(--size-fluid-2);
+    padding: var(--size-fluid-3);
 }
 
 h1, h2 {
@@ -91,7 +91,7 @@ h1 {
 }
 h2 {
     font-size: var(--font-size-fluid-1);
-    margin-bottom: var(--size-2);
+    margin-bottom: var(--size-4);
 }
 ul, ol {
     margin-left: var(--size-4);
@@ -130,6 +130,12 @@ h1, h2, h3, h4, h5, h6 {
 p {
     max-width: var(--size-content-3);
     text-wrap: pretty;
+}
+
+.album-art {
+    border-radius: var(--radius-3);
+    width: var(--size-fluid-9);
+    margin-bottom: var(--size-4);
 }
 
 @media (max-width: 640px) {
