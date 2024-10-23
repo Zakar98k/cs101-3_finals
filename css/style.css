@@ -1,4 +1,4 @@
-@import "https://unpkg.com/open-props";
+@import "./open-props.min.css";
 @import "./fonts.css";
 @import "./reset.css";
 
@@ -27,10 +27,18 @@
     --subtext: var(--surface-6);
     --text: var(--surface-7);
     --accent: var(--yellow);
-    --secondary: var(--magenta);
+    --secondary: var(--purple);
 
 
     --font-default: "HK Grotesk", var(--font-neo-grotesque);
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--text);
+}
+b, i {
+    color: var(--secondary);
 }
 
 body {
@@ -61,13 +69,15 @@ main > * {
     border-radius: var(--radius-3);
 }
 .center-container {
-    flex: 2 0;
-    min-width: var(--size-content-2);
+    flex: 1 1 1;
+    max-width: calc(var(--size-content-3) + 10vw);
+    min-width: var(--size-content-1);
 }
 .container {
     display: flex;
-    flex: 0.8 1;
+    flex: 2 0 2;
     flex-direction: column;
+    min-width: fit-content;
     padding: var(--size-fluid-2);
 }
 
@@ -77,30 +87,49 @@ h1, h2 {
 }
 h1 {
     font-size: var(--font-size-fluid-2);
-    margin-bottom: var(--size-4);
+    margin-bottom: var(--size-3);
 }
 h2 {
     font-size: var(--font-size-fluid-1);
     margin-bottom: var(--size-2);
 }
+ul, ol {
+    margin-left: var(--size-4);
+}
 
-#hero {
+.hero {
     display: block;
     border-top-left-radius: var(--radius-3);
     border-top-right-radius: var(--radius-3);
-    min-width: 100%;
-
+    width: 100%;
 }
 
-p, li > a {
+p, a {
     color: var(--text);
     font-size: var(--font-size-3);
     line-height: var(--font-lineheight-2);
     font-weight: normal;
 }
+
+a:visited {
+    color: var(--secondary);
+}
+a:link {
+    color: var(--accent);
+}
 hr {
     height: var(--size-4);
     border: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+p {
+    max-width: var(--size-content-3);
+    text-wrap: pretty;
 }
 
 @media (max-width: 640px) {
@@ -109,5 +138,11 @@ hr {
     }
     main > * {
         flex: 0;
+    }
+
+    p, li > a {
+        font-size: var(--font-size-1);
+        line-height: var(--font-lineheight-2);
+        font-weight: normal;
     }
 }
