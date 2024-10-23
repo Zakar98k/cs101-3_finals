@@ -1,0 +1,54 @@
+@import "https://unpkg.com/open-props";
+@import "./fonts.css";
+@import "./reset.css";
+
+:root {
+    --surface-1: rgb(24, 21, 21);
+    --surface-2: rgb(34, 30, 30);
+    --surface-3: rgb(66, 57, 57);
+    --surface-4: rgb(109, 95, 95);
+    --surface-5: rgb(151, 135, 135);
+    --surface-6: rgb(182, 168, 165);
+    --surface-7: rgb(244, 230, 210);
+
+    --red: rgb(202, 63, 63);
+    --orange: rgb(228, 106, 58);
+    --yellow: rgb(227, 156, 69);
+    --green: rgb(152, 159, 86);
+    --teal: rgb(98, 147, 134);
+    --blue: rgb(81, 120, 148);
+    --magenta: rgb(74, 90, 141);
+    --purple: rgb(159, 86, 154);
+    --pink: rgb(196, 84, 151);
+
+    --background: var(--surface-1);
+    --surface: var(--surface-2);
+    --overlay: var(--surface-3);
+    --subtext: var(--surface-6);
+    --text: var(--surface-7);
+    --accent: var(--yellow);
+    --secondary: var(--magenta);
+
+
+    --font-default: "HK Grotesk", var(--font-neo-grotesque);
+}
+
+body {
+    font-family: var(--font-default);
+    background-color: var(--background);
+    color: var(--text);
+}
+
+h1 {
+    color: var(--accent);
+    font-size: var(--font-size-fluid-3);
+    line-height: var(--font-lineheight-5);
+    font-weight: bold;
+}
+
+p {
+    color: inherit;
+    font-size: var(--font-size-3);
+    line-height: var(--font-lineheight-2);
+    font-weight: normal;
+}

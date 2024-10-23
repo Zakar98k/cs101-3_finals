@@ -1,0 +1,60 @@
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+p {
+    max-inline-size: var(--size-content-3);
+    text-wrap: pretty;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--size-8);
+    }
+}
+
+/* dark mode user-agent-styles */
+/* html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+} */
+
+/* min body height */
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+    font-style: italic;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    shape-margin: 1rem;
+}
